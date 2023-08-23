@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #container {
+        height: 500px;
+        min-width: 310px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .loading {
+        margin-top: 10em;
+        text-align: center;
+        color: gray;
+    }
+</style>
+
+<body>
+    <div id="container" class="container"></div>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        var data;
+
+        $.ajax({
+            url: './map.json',
+            dataType: "json",
+            type: 'GET',
+            success: function (_data) {
+                console.log(_data[0]);
+                var options = {
+                    type: 'map',
+                    series: _data,
+                };
+                Highcharts.mapChart('container', options);
+            },
+            error: function (request, error) {
+                console.log(error);
+                alert(" Can't do because: " + error);
+            },
+        })
+
+    </script>
+</body>
+
+</html>
