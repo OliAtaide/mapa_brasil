@@ -254,7 +254,7 @@
   {
     "type": "map",
     "joinBy": "id",
-    "name": "Norte",
+    "name": "Sul",
     "mapData": [
       {
         "id": "id3",
