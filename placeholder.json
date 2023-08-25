@@ -1,0 +1,58 @@
+[
+    {
+        "texto": "Webcam",
+        "valor": 10
+    },
+    {
+        "texto": "Tablet",
+        "valor": 12
+    },
+    {
+        "texto": "TV 65\" Smart",
+        "valor": 8
+    },
+    {
+        "texto": "Computadores",
+        "valor": 20
+    },
+    {
+        "texto": "Monitor Extra",
+        "valor": 20
+    },
+    {
+        "texto": "Headset",
+        "valor": 23
+    },
+    {
+        "texto": "Condicionador de Energia",
+        "valor": 5
+    },
+    {
+        "texto": "Microfone Omnidirecional",
+        "valor": 15
+    },
+    {
+        "texto": "Rack de Parede 8U",
+        "valor": 5
+    },
+    {
+        "texto": "Switch 24 portas",
+        "valor": 18
+    },
+    {
+        "texto": "Telefone VOIP",
+        "valor": 25
+    },
+    {
+        "texto": "NoBreak",
+        "valor": 17
+    },
+    {
+        "texto": "Ar condicionado 12000 BTUS",
+        "valor": 6
+    },
+    {
+        "texto": "Ar condicionado 22000 BTUS",
+        "valor": 8
+    }
+]
