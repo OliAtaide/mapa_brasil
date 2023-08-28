@@ -67,25 +67,27 @@ $.ajax({
                 }
             }
 
-            $('.container').append(
+            $('.map').prepend(
                 `
-                <div class="map" id="map">
-                        <div class="card map-card">
+                        <div class="card map-card" id="map${regiao}" style="display: none;">
                             <div class="card-title d-flex card-header">
                                 <h3>
                                     ${regiao}
+                                    </h3>
                                 <button type="button" class="btn border ms-auto">
                                     <i class="bi bi-eye"></i>Ver detalhes
                                 </button>
                             </div>
-                            <div class="card-body">
-    
+                            <div class="card-subheader mx-3">
+                            
                                 <div class="d-flex align-items-center">
                                     <h5>
                                         Itens doados
                                     </h5>
                                     <h3 class="ms-auto">172.288.478</h3>
                                 </div>
+                            </div>
+                            <div class="card-body">
                                 <div class="border botoes">
                                     <div class="row">
                                         <div class="col">
@@ -105,7 +107,6 @@ $.ajax({
                                 </div>
                             </div>
                         </div>
-                    </div>
                 `
             )
 
@@ -153,6 +154,8 @@ $.ajax({
                                     color: this.borderColor,
                                     borderColor: 'white',
                                 });
+                                $('.map-card').hide();
+                                $('#map' + this.name).show();
                                 console.log(this)
                             },
                             unselect: function () {

@@ -18,7 +18,7 @@ body {
 }
 
 .map-card {
-    width: 500px;
+    width: 50% !important;
     color: #0b486b;
 }
 
@@ -66,9 +66,57 @@ path {
 
 .map{
     display: flex;
-    width: 100%;
+}
 
-    .map-field{
-        width: 100%;
+.card-header{
+    background-color: white;
+    border: none;
+}
+
+#mapNordeste{
+    border-color: #FF8A50;
+
+    .card-header, .card-subheader{
+        color: #C41C00 !important;
+
+        .btn{
+            border-color: #C41C00 !important;
+            color: #C41C00 !important;
+        }
     }
+
+    .card-body{
+        h3, h5, p{
+            color: #FF8A50 !important;
+        }
+    }
+}
+
+#mapNorte{
+    border-color: #178545;
+    .card-header,.card-body, .card-subheader{
+        color: #178545 !important;
+    }
+}
+
+#mapCentro-Oeste{
+    border-color: #946900;
+    .card-header,.card-body, .card-subheader{
+        color: #946900 !important;
+    }
+}
+
+#mapCentro-Oeste{
+    border-color: #FFC107;
+    .card-header,.card-body, .card-subheader{
+        color: #946900 !important;
+    }
+}
+
+#mapSudeste{
+    border-color: #446AB8;
+    .card-header,.card-body, .card-subheader{
+        color: #446AB8 !important;
+    }
+
 }

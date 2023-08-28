@@ -17,7 +17,7 @@ body {
 }
 
 .map-card {
-  width: 500px;
+  width: 50% !important;
   color: #0b486b;
 }
 
@@ -65,10 +65,53 @@ path {
 
 .map {
   display: flex;
-  width: 100%;
 }
-.map .map-field {
-  width: 100%;
+
+.card-header {
+  background-color: white;
+  border: none;
+}
+
+#mapNordeste {
+  border-color: #FF8A50;
+}
+#mapNordeste .card-header, #mapNordeste .card-subheader {
+  color: #C41C00 !important;
+}
+#mapNordeste .card-header .btn, #mapNordeste .card-subheader .btn {
+  border-color: #C41C00 !important;
+  color: #C41C00 !important;
+}
+#mapNordeste .card-body h3, #mapNordeste .card-body h5, #mapNordeste .card-body p {
+  color: #FF8A50 !important;
+}
+
+#mapNorte {
+  border-color: #178545;
+}
+#mapNorte .card-header, #mapNorte .card-body, #mapNorte .card-subheader {
+  color: #178545 !important;
+}
+
+#mapCentro-Oeste {
+  border-color: #946900;
+}
+#mapCentro-Oeste .card-header, #mapCentro-Oeste .card-body, #mapCentro-Oeste .card-subheader {
+  color: #946900 !important;
+}
+
+#mapCentro-Oeste {
+  border-color: #FFC107;
+}
+#mapCentro-Oeste .card-header, #mapCentro-Oeste .card-body, #mapCentro-Oeste .card-subheader {
+  color: #946900 !important;
+}
+
+#mapSudeste {
+  border-color: #446AB8;
+}
+#mapSudeste .card-header, #mapSudeste .card-body, #mapSudeste .card-subheader {
+  color: #446AB8 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
