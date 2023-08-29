@@ -135,6 +135,7 @@ $.ajax({
         console.log(_data[0]);
         var options = {
             type: 'map',
+            exporting: { enabled: false },
             title: {
                 text: ''
             },

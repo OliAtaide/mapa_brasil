@@ -12,6 +12,11 @@ body {
   box-shadow: 0px 0px 1em black;
 }
 
+.btn-voltar {
+  color: #0b486b;
+  font-weight: 500;
+}
+
 .map-card .card-header {
   position: relative;
 }
@@ -19,6 +24,8 @@ body {
 .map-card {
   width: 50% !important;
   color: #0b486b;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .map-card button {
@@ -30,7 +37,7 @@ body {
 .map-card .card-header::before {
   content: "";
   width: 0.5em;
-  background-color: black;
+  background-color: #0b486b;
   border-radius: 0.25em;
   position: absolute;
   height: 40px;
@@ -73,45 +80,83 @@ path {
 }
 
 #mapNordeste {
-  border-color: #FF8A50;
+  border-color: #ff8a50;
 }
-#mapNordeste .card-header, #mapNordeste .card-subheader {
-  color: #C41C00 !important;
+#mapNordeste .card-header::before {
+  background-color: #ff8a50 !important;
 }
-#mapNordeste .card-header .btn, #mapNordeste .card-subheader .btn {
-  border-color: #C41C00 !important;
-  color: #C41C00 !important;
+#mapNordeste .card-header,
+#mapNordeste .card-subheader {
+  color: #c41c00 !important;
 }
-#mapNordeste .card-body h3, #mapNordeste .card-body h5, #mapNordeste .card-body p {
-  color: #FF8A50 !important;
+#mapNordeste .card-header .btn,
+#mapNordeste .card-subheader .btn {
+  border-color: #c41c00 !important;
+  color: #c41c00 !important;
+}
+#mapNordeste .card-body h3,
+#mapNordeste .card-body h5,
+#mapNordeste .card-body p {
+  color: #ff8a50 !important;
 }
 
 #mapNorte {
   border-color: #178545;
 }
-#mapNorte .card-header, #mapNorte .card-body, #mapNorte .card-subheader {
+#mapNorte .card-header::before {
+  background-color: #178545 !important;
+}
+#mapNorte .card-header,
+#mapNorte .card-body,
+#mapNorte .card-subheader {
   color: #178545 !important;
 }
 
 #mapCentro-Oeste {
-  border-color: #946900;
+  border-color: #ffc107;
 }
-#mapCentro-Oeste .card-header, #mapCentro-Oeste .card-body, #mapCentro-Oeste .card-subheader {
-  color: #946900 !important;
+#mapCentro-Oeste .card-header::before {
+  background-color: #ffc107 !important;
 }
-
-#mapCentro-Oeste {
-  border-color: #FFC107;
-}
-#mapCentro-Oeste .card-header, #mapCentro-Oeste .card-body, #mapCentro-Oeste .card-subheader {
+#mapCentro-Oeste .card-header,
+#mapCentro-Oeste .card-body,
+#mapCentro-Oeste .card-subheader {
   color: #946900 !important;
 }
 
 #mapSudeste {
-  border-color: #446AB8;
+  border-color: #446ab8;
 }
-#mapSudeste .card-header, #mapSudeste .card-body, #mapSudeste .card-subheader {
-  color: #446AB8 !important;
+#mapSudeste .card-header::before {
+  background-color: #446ab8 !important;
+}
+#mapSudeste .card-header,
+#mapSudeste .card-body,
+#mapSudeste .card-subheader {
+  color: #446ab8 !important;
+}
+
+.accordion-button {
+  color: #008380 !important;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+table th,
+table td {
+  color: #0b486b !important;
+  padding: 0.5em 1em !important;
+  line-height: 1;
+  vertical-align: middle;
+}
+table .btn-download {
+  color: #446AB8;
+  border: 1px solid #446AB8;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
