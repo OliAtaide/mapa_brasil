@@ -1,6 +1,6 @@
 
 $.ajax({
-    url: 'placeholder.json',
+    url: 'scripts/placeholder.json',
     dataType: "json",
     type: 'GET',
     success: function (_data) {
@@ -31,16 +31,14 @@ let regioes = [
 ]
 
 $.ajax({
-    url: 'data.json',
+    url: 'scripts/data.json',
     dataType: "json",
     type: 'GET',
     success: function (_data) {
-        console.log(_data);
 
         regioes.forEach(regiao => {
 
             const filtered = _data.filter(item => item["Região"] === regiao)
-            console.log(filtered);
 
             var cards = '';
 
@@ -48,7 +46,6 @@ $.ajax({
                 var sum = filtered.reduce((accumulator, currentValue) => accumulator + currentValue[property], 0);
 
                 if (sum && Number.isInteger(sum)) {
-                    console.log(property + ': ' + sum)
                     cards +=
                         `
                                     <div class="col mt-4">
@@ -74,9 +71,9 @@ $.ajax({
                                 <h3>
                                     ${regiao}
                                     </h3>
-                                <button type="button" class="btn border ms-auto">
+                                <a href="regioes/${regiao}.html" type="button" class="btn border ms-auto">
                                     <i class="bi bi-eye"></i>Ver detalhes
-                                </button>
+                                </a>
                             </div>
                             <div class="card-subheader mx-3">
                             
@@ -128,11 +125,10 @@ function unselectByClick() {
 var currentColor;
 
 $.ajax({
-    url: './map.json',
+    url: 'scripts/map.json',
     dataType: "json",
     type: 'GET',
     success: function (_data) {
-        console.log(_data[0]);
         var options = {
             type: 'map',
             exporting: { enabled: false },
@@ -157,13 +153,11 @@ $.ajax({
                                 });
                                 $('.map-card').hide();
                                 $('#map' + this.name).show();
-                                console.log(this)
                             },
                             unselect: function () {
                                 this.update({
                                     color: '#f9f9f9',
                                 });
-                                console.log(this)
                             },
                             mouseOver: function () {
                                 if (!this.selected) {
@@ -195,7 +189,6 @@ $.ajax({
 
     },
     error: function (request, error) {
-        console.log(error);
         alert(" Can't do because: " + error);
     },
 })
