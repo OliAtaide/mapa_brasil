@@ -25,8 +25,11 @@ body {
 .map-card {
     width: 50% !important;
     color: #0b486b;
-    height: 100vh;
-    overflow-y: scroll;
+
+    .row-data {
+        overflow-y: scroll;
+        height: 400px;
+    }
 }
 
 .map-card button {
@@ -69,6 +72,16 @@ i {
 path {
     /* fill: #F9F9F9; */
     cursor: pointer;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .map {
@@ -163,13 +176,35 @@ table {
         vertical-align: middle;
     }
 
-    .btn-download{
-        color: #446AB8;
-        border: 1px solid #446AB8;
+    .btn-download {
+        color: #446ab8;
+        border: 1px solid #446ab8;
         height: 32px;
         width: 32px;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.highcharts-label {
+    &:first-child rect {
+        fill: #178545 !important;
+    }
+
+    &:nth-child(2) rect {
+        fill: #ff8a50 !important;
+    }
+
+    &:nth-child(3) rect {
+        fill: #946900 !important;
+    }
+
+    &:nth-child(4) rect {
+        fill: #7998eb !important;
+    }
+
+    &:last-child rect {
+        fill: #0b486b !important;
     }
 }

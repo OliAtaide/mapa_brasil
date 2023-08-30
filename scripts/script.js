@@ -144,7 +144,27 @@ $.ajax({
             plotOptions: {
                 series: {
                     allowPointSelect: true,
+                    dataLabels: {
+                        enabled: true,
+                        color: '#FFFFFF',
+                        format: '0{(add y 1)}',
+                        padding: 10,
+                        borderColor: 'white',
+                        borderRadius: '50%',
+                        borderWidth: 2,
+                        align: 'center',
+                        useHTML: true,
+                        style: {
+                            textOutline: 'none',
+                            fontSize: 20,
+                            fontWeight: 600,
+                            lineHeight: 1
+                        },
+                    },
                     point: {
+                        label: {
+                            backgroundColor: 'black'
+                        },
                         events: {
                             select: function () {
                                 this.update({

@@ -98,21 +98,21 @@ let estados2 = {
             nome: "Sergipe"
         }
     ],
-    'Centro-Oeste':[
+    'Centro-Oeste': [
         {
-            sigla: "MG",
+            sigla: "MT",
             nome: "Mato Grosso"
         },
         {
             sigla: "MS",
             nome: "Mato Grosso do Sul"
-        },,
+        }, ,
         {
             sigla: "GO",
             nome: "Goiás"
         },
     ],
-    'Sudeste':[
+    'Sudeste': [
         {
             sigla: "MG",
             nome: "Minas Gerais"
@@ -130,7 +130,7 @@ let estados2 = {
             nome: "Rio de Janeiro"
         }
     ],
-    'Sul':[
+    'Sul': [
         {
             sigla: "PR",
             nome: "Paraná"
@@ -147,7 +147,7 @@ let estados2 = {
 }
 
 let regioes = [
-    'Nordeste', 'Norte', 'Centro-Oeste', 'Sul', 'Sudeste'
+    'Nordeste', 'Norte', 'Centro Oeste', 'Sul', 'Sudeste'
 ]
 
 function getEquip(regiao) {
@@ -166,6 +166,8 @@ function getEquip(regiao) {
                 var rows = '';
 
                 const equip = filtered.filter(item => item["Estado - UF"] === e.sigla)
+
+                console.log(equip)
 
                 equip.forEach(q => {
                     for (var property in q) {
