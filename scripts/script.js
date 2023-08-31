@@ -42,10 +42,13 @@ $.ajax({
 
             var cards = '';
 
+            var total = 0;
+
             for (var property in filtered[0]) {
                 var sum = filtered.reduce((accumulator, currentValue) => accumulator + currentValue[property], 0);
 
                 if (sum && Number.isInteger(sum)) {
+                    total += sum;
                     cards +=
                         `
                                     <div class="col mt-4">
@@ -66,14 +69,14 @@ $.ajax({
 
             $('.map').prepend(
                 `
-                        <div class="card map-card" id="map${regiao}" style="display: none;">
+                        <div class="card map-card py-3" id="map${regiao}" style="display: none;">
                             <div class="card-title d-flex card-header">
                                 <h3>
                                     ${regiao}
                                     </h3>
-                                <a href="regioes/${regiao}.html" type="button" class="btn border ms-auto">
+                                <button onclick="location.href='regioes/${regiao}.html';" class="btn border ms-auto">
                                     <i class="bi bi-eye"></i>Ver detalhes
-                                </a>
+                                </button>
                             </div>
                             <div class="card-subheader mx-3">
                             
@@ -81,19 +84,19 @@ $.ajax({
                                     <h5>
                                         Itens doados
                                     </h5>
-                                    <h3 class="ms-auto">172.288.478</h3>
+                                    <h3 class="ms-auto">${total}</h3>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <div class="border botoes">
                                     <div class="row">
                                         <div class="col">
-                                            <button type="button" class="btn bg-black text-white w-100">
+                                            <button type="button" class="btn btn-elt bg-black text-white w-100">
                                                 Eletrônicos
                                             </button>
                                         </div>
                                         <div class="col">
-                                            <button type="button" class="btn border w-100">
+                                            <button type="button" class="btn btn-lab border w-100">
                                                 Laboratoriais
                                             </button>
                                         </div>

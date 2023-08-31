@@ -30,22 +30,24 @@ body {
         overflow-y: scroll;
         height: 400px;
     }
-}
 
-.map-card button {
-    gap: 0.5em;
-    display: flex;
-    align-items: center;
-}
-
-.map-card .card-header::before {
-    content: "";
-    width: 0.5em;
-    background-color: #0b486b;
-    border-radius: 0.25em;
-    position: absolute;
-    height: 40px;
-    left: -0.25em;
+    .btn {
+        gap: 0.5em;
+        display: flex;
+        align-items: center;
+        border-color: #0b486b !important;
+        color: #0b486b;
+    }
+    
+    .card-header::before {
+        content: "";
+        width: 0.5em;
+        background-color: #0b486b;
+        border-radius: 0.25em;
+        position: absolute;
+        height: 40px;
+        left: -0.25em;
+    }
 }
 
 .botoes {
@@ -103,11 +105,11 @@ path {
     .card-header,
     .card-subheader {
         color: #c41c00 !important;
-
-        .btn {
-            border-color: #c41c00 !important;
-            color: #c41c00 !important;
-        }
+    }
+    
+    .card-header .btn {
+        border-color: #c41c00 !important;
+        color: #c41c00 !important;
     }
 
     .card-body {
@@ -122,39 +124,49 @@ path {
 #mapNorte {
     border-color: #178545;
 
+    .card-header .btn{
+        border-color: #178545 !important;
+    }
+
     .card-header::before {
         background-color: #178545 !important;
     }
 
-    .card-header,
-    .card-body,
-    .card-subheader {
+    .card-header, .card-header .btn,
+    .card-subheader, .data-card {
         color: #178545 !important;
     }
 }
 
 #mapCentro-Oeste {
     border-color: #ffc107;
+    
+    .card-header .btn{
+        border-color: #946900 !important;
+    }
 
     .card-header::before {
         background-color: #ffc107 !important;
     }
-    .card-header,
-    .card-body,
-    .card-subheader {
+    .card-header, .card-header .btn,
+    .card-subheader, .data-card {
         color: #946900 !important;
     }
 }
 
 #mapSudeste {
     border-color: #446ab8;
+    
+    .card-header .btn, .btn-elet{
+        border-color: #446ab8 !important;
+    }
+
     .card-header::before {
         background-color: #446ab8 !important;
     }
 
-    .card-header,
-    .card-body,
-    .card-subheader {
+    .card-header, .card-header .btn,
+    .card-subheader, .data-card {
         color: #446ab8 !important;
     }
 }

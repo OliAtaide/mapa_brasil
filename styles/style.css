@@ -29,13 +29,13 @@ body {
   overflow-y: scroll;
   height: 400px;
 }
-
-.map-card button {
+.map-card .btn {
   gap: 0.5em;
   display: flex;
   align-items: center;
+  border-color: #0b486b !important;
+  color: #0b486b;
 }
-
 .map-card .card-header::before {
   content: "";
   width: 0.5em;
@@ -100,8 +100,7 @@ path::after {
 #mapNordeste .card-subheader {
   color: #c41c00 !important;
 }
-#mapNordeste .card-header .btn,
-#mapNordeste .card-subheader .btn {
+#mapNordeste .card-header .btn {
   border-color: #c41c00 !important;
   color: #c41c00 !important;
 }
@@ -114,36 +113,42 @@ path::after {
 #mapNorte {
   border-color: #178545;
 }
+#mapNorte .card-header .btn {
+  border-color: #178545 !important;
+}
 #mapNorte .card-header::before {
   background-color: #178545 !important;
 }
-#mapNorte .card-header,
-#mapNorte .card-body,
-#mapNorte .card-subheader {
+#mapNorte .card-header, #mapNorte .card-header .btn,
+#mapNorte .card-subheader, #mapNorte .data-card {
   color: #178545 !important;
 }
 
 #mapCentro-Oeste {
   border-color: #ffc107;
 }
+#mapCentro-Oeste .card-header .btn {
+  border-color: #946900 !important;
+}
 #mapCentro-Oeste .card-header::before {
   background-color: #ffc107 !important;
 }
-#mapCentro-Oeste .card-header,
-#mapCentro-Oeste .card-body,
-#mapCentro-Oeste .card-subheader {
+#mapCentro-Oeste .card-header, #mapCentro-Oeste .card-header .btn,
+#mapCentro-Oeste .card-subheader, #mapCentro-Oeste .data-card {
   color: #946900 !important;
 }
 
 #mapSudeste {
   border-color: #446ab8;
 }
+#mapSudeste .card-header .btn, #mapSudeste .btn-elet {
+  border-color: #446ab8 !important;
+}
 #mapSudeste .card-header::before {
   background-color: #446ab8 !important;
 }
-#mapSudeste .card-header,
-#mapSudeste .card-body,
-#mapSudeste .card-subheader {
+#mapSudeste .card-header, #mapSudeste .card-header .btn,
+#mapSudeste .card-subheader, #mapSudeste .data-card {
   color: #446ab8 !important;
 }
 
