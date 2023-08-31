@@ -27,8 +27,8 @@ body {
     color: #0b486b;
 
     .row-data {
-        overflow-y: scroll;
-        height: 400px;
+        overflow-y: auto;
+        max-height: 400px;
     }
 
     .nav-link {

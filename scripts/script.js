@@ -71,8 +71,6 @@ $.ajax({
 
             const filtered = _data.filter(item => item["Região"] === regiao)
 
-            var cards = '';
-
             var elts = '', labs = '';
 
             var total = 0;
@@ -80,15 +78,14 @@ $.ajax({
             for (var property in filtered[0]) {
                 var sum = filtered.reduce((accumulator, currentValue) => accumulator + currentValue[property], 0);
 
-                
+
 
                 if (sum && Number.isInteger(sum)) {
-                    console.log(property, equipamentos[property])
 
                     total += sum;
                     var card =
                         `
-                                    <div class="col mt-4">
+                                    <div class="col my-2">
                                         <div class="card data-card">
                                             <div class="card-body py-1">
                                                 <h3 class="card-title">
@@ -102,10 +99,10 @@ $.ajax({
                                     </div>
                         `;
 
-                    if(!equipamentos[property]){
+                    if (!equipamentos[property]) {
                         elts += card
                     }
-                    else{
+                    else {
                         labs += card
                     }
                 }
@@ -118,7 +115,7 @@ $.ajax({
                                 <h3>
                                     ${regiao}
                                     </h3>
-                                <button onclick="location.href='regioes/${regiao}.html';" class="btn border ms-auto">
+                                <button onclick="location.href='regioes/${regiao}.html';" class="btn border ms-auto d-flex align-items-center gap-2">
                                     <i class="bi bi-eye"></i>Ver detalhes
                                 </button>
                             </div>
@@ -138,19 +135,25 @@ $.ajax({
                                         <a class="flex-sm-fill text-center nav-link active btn" id="home-tab"
                                             data-bs-toggle="tab" data-bs-target="#elet-tab-${regiao}" type="button" role="tab"
                                             aria-controls="elet-tab-${regiao}" aria-selected="true">
+                                            <span class="material-symbols-outlined">
+                                                bolt
+                                            </span>
                                             Eletrônicos
                                         </a>
 
                                         <a class="flex-sm-fill text-center nav-link btn" id="profile-tab"
                                             data-bs-toggle="tab" data-bs-target="#lab-tab-${regiao}" type="button" role="tab"
                                             aria-controls="lab-tab-${regiao}" aria-selected="false">
+                                            <span class="material-symbols-outlined">
+                                                vaccines
+                                            </span>
                                             Laboratoriais
                                         </a>
 
                                     </nav>
                                 </div>
-                                <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane fade show active" id="elet-tab-${regiao}" role="tabpanel"
+                                <div class="tab-content my-2" id="myTabContent">
+                                    <div class="tab-pane tab-pane-elt fade show active" id="elet-tab-${regiao}" role="tabpanel"
                                         aria-labelledby="home-tab" tabindex="0">
                                         <div class="row row-data">
                                         ${elts}

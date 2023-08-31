@@ -26,8 +26,8 @@ body {
   color: #0b486b;
 }
 .map-card .row-data {
-  overflow-y: scroll;
-  height: 400px;
+  overflow-y: auto;
+  max-height: 400px;
 }
 .map-card .nav-link {
   gap: 0.5em;
