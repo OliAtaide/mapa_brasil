@@ -29,12 +29,16 @@ body {
   overflow-y: scroll;
   height: 400px;
 }
-.map-card .btn {
+.map-card .nav-link {
   gap: 0.5em;
   display: flex;
   align-items: center;
   border-color: #0b486b !important;
   color: #0b486b;
+}
+.map-card .nav-link.active {
+  background-color: #0b486b;
+  color: white;
 }
 .map-card .card-header::before {
   content: "";
@@ -109,6 +113,14 @@ path::after {
 #mapNordeste .card-body p {
   color: #ff8a50 !important;
 }
+#mapNordeste .nav-link {
+  border-color: #ff8a50 !important;
+  color: #ff8a50;
+}
+#mapNordeste .nav-link.active {
+  background-color: #ff8a50;
+  color: white;
+}
 
 #mapNorte {
   border-color: #178545;
@@ -122,6 +134,14 @@ path::after {
 #mapNorte .card-header, #mapNorte .card-header .btn,
 #mapNorte .card-subheader, #mapNorte .data-card {
   color: #178545 !important;
+}
+#mapNorte .nav-link {
+  border-color: #178545 !important;
+  color: #178545;
+}
+#mapNorte .nav-link.active {
+  background-color: #178545;
+  color: white;
 }
 
 #mapCentro-Oeste {
@@ -137,6 +157,14 @@ path::after {
 #mapCentro-Oeste .card-subheader, #mapCentro-Oeste .data-card {
   color: #946900 !important;
 }
+#mapCentro-Oeste .nav-link {
+  border-color: #946900 !important;
+  color: #946900;
+}
+#mapCentro-Oeste .nav-link.active {
+  background-color: #946900;
+  color: white;
+}
 
 #mapSudeste {
   border-color: #446ab8;
@@ -150,6 +178,14 @@ path::after {
 #mapSudeste .card-header, #mapSudeste .card-header .btn,
 #mapSudeste .card-subheader, #mapSudeste .data-card {
   color: #446ab8 !important;
+}
+#mapSudeste .nav-link {
+  border-color: #446ab8 !important;
+  color: #446ab8;
+}
+#mapSudeste .nav-link.active {
+  background-color: #446ab8;
+  color: white;
 }
 
 .accordion-button {

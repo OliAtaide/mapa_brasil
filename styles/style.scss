@@ -31,12 +31,17 @@ body {
         height: 400px;
     }
 
-    .btn {
+    .nav-link {
         gap: 0.5em;
         display: flex;
         align-items: center;
         border-color: #0b486b !important;
         color: #0b486b;
+
+        &.active{
+            background-color: #0b486b;
+            color: white;
+        }
     }
     
     .card-header::before {
@@ -119,6 +124,16 @@ path {
             color: #ff8a50 !important;
         }
     }
+
+    .nav-link {
+        border-color: #ff8a50 !important;
+        color: #ff8a50;
+
+        &.active{
+            background-color: #ff8a50;
+            color: white;
+        }
+    }
 }
 
 #mapNorte {
@@ -136,6 +151,16 @@ path {
     .card-subheader, .data-card {
         color: #178545 !important;
     }
+    
+    .nav-link {
+        border-color: #178545 !important;
+        color: #178545;
+
+        &.active{
+            background-color: #178545;
+            color: white;
+        }
+    }
 }
 
 #mapCentro-Oeste {
@@ -151,6 +176,16 @@ path {
     .card-header, .card-header .btn,
     .card-subheader, .data-card {
         color: #946900 !important;
+    }
+    
+    .nav-link {
+        border-color: #946900 !important;
+        color: #946900;
+
+        &.active{
+            background-color: #946900;
+            color: white;
+        }
     }
 }
 
@@ -168,6 +203,16 @@ path {
     .card-header, .card-header .btn,
     .card-subheader, .data-card {
         color: #446ab8 !important;
+    }
+    
+    .nav-link {
+        border-color: #446ab8 !important;
+        color: #446ab8;
+
+        &.active{
+            background-color: #446ab8;
+            color: white;
+        }
     }
 }
 

@@ -51,28 +51,32 @@
                             </button>
                         </div>
                         <div class="card-body">
-
-                            <div class="d-flex align-items-center">
-                                <h5>
-                                    Itens doados
-                                </h5>
-                                <h3 class="ms-auto">172.288.478</h3>
-                            </div>
                             <div class="border botoes">
-                                <div class="row">
-                                    <div class="col">
-                                        <button type="button" class="btn bg-black text-white w-100">
-                                            Eletrônicos
-                                        </button>
-                                    </div>
-                                    <div class="col">
-                                        <button type="button" class="btn border w-100">
-                                            Laboratoriais
-                                        </button>
+                                <nav class="nav nav-tabs flex-row gap-3" id="myTab" role="tablist">
+
+                                    <a class="flex-sm-fill text-center nav-link active btn" id="home-tab"
+                                        data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">
+                                        Eletrônicos
+                                    </a>
+
+                                    <a class="flex-sm-fill text-center nav-link btn" id="profile-tab"
+                                        data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                        aria-controls="profile-tab-pane" aria-selected="false">
+                                        Laboratoriais
+                                    </a>
+
+                                </nav>
+                            </div>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                    aria-labelledby="home-tab" tabindex="0">
+                                    <div class="row row-data">
+
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row row-data">
+                                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                    aria-labelledby="profile-tab" tabindex="0">...</div>
 
                             </div>
                         </div>

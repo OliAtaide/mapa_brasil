@@ -150,6 +150,8 @@ let regioes = [
     'Nordeste', 'Norte', 'Centro Oeste', 'Sul', 'Sudeste'
 ]
 
+
+
 function getEquip(regiao) {
     $('.card-header .card-title').html(
         regiao

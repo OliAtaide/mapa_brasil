@@ -30,6 +30,37 @@ let regioes = [
     'Nordeste', 'Norte', 'Centro-Oeste', 'Sul', 'Sudeste'
 ]
 
+let equipamentos = {
+    "Webcam": 0,
+    "Tablet": 0,
+    "TV 65\" Smart": 0,
+    "Computadores": 0,
+    "Monitor Extra": 0,
+    "Headset": 0,
+    "Condicionador de Energia": 0,
+    "Microfone Omnidirecional": 0,
+    "Rack de Parede 8U": 0,
+    "Switch 24 portas": 0,
+    "Telefone VOIP": 0,
+    "Ar condicionado 12000 BTUS": 0,
+    "Ar condicionado 22000 BTUS": 0,
+    "Micropipeta 8 canais": 1,
+    "Micropipeta Monocanal": 1,
+    "Microsc\u00f3pio \u00d3ptico": 1,
+    "Cadeira Grirat\u00f3ria": 0,
+    "Cabine Biol\u00f3gica": 1,
+    "Freezer -30\u00b0C": 1,
+    "C\u00e2mara de Vacina": 1,
+    "PCR em Tempo Real": 1,
+    "Termociclador": 1,
+    "Ultra Freezer -86\u00b0C": 1,
+    "NoBreak": 1,
+    "Banho Maria": 1,
+    "V\u00f3rtex": 1,
+    "Sistema de Eletroforese": 1,
+    "Sistema de Fotodocumenta\u00e7\u00e3o": 1
+}
+
 $.ajax({
     url: 'scripts/data.json',
     dataType: "json",
@@ -42,14 +73,20 @@ $.ajax({
 
             var cards = '';
 
+            var elts = '', labs = '';
+
             var total = 0;
 
             for (var property in filtered[0]) {
                 var sum = filtered.reduce((accumulator, currentValue) => accumulator + currentValue[property], 0);
 
+                
+
                 if (sum && Number.isInteger(sum)) {
+                    console.log(property, equipamentos[property])
+
                     total += sum;
-                    cards +=
+                    var card =
                         `
                                     <div class="col mt-4">
                                         <div class="card data-card">
@@ -64,6 +101,13 @@ $.ajax({
                                         </div>
                                     </div>
                         `;
+
+                    if(!equipamentos[property]){
+                        elts += card
+                    }
+                    else{
+                        labs += card
+                    }
                 }
             }
 
@@ -89,21 +133,35 @@ $.ajax({
                             </div>
                             <div class="card-body">
                                 <div class="border botoes">
-                                    <div class="row">
-                                        <div class="col">
-                                            <button type="button" class="btn btn-elt bg-black text-white w-100">
-                                                Eletrônicos
-                                            </button>
-                                        </div>
-                                        <div class="col">
-                                            <button type="button" class="btn btn-lab border w-100">
-                                                Laboratoriais
-                                            </button>
+                                    <nav class="nav nav-tabs flex-row gap-3" id="myTab" role="tablist">
+
+                                        <a class="flex-sm-fill text-center nav-link active btn" id="home-tab"
+                                            data-bs-toggle="tab" data-bs-target="#elet-tab-${regiao}" type="button" role="tab"
+                                            aria-controls="elet-tab-${regiao}" aria-selected="true">
+                                            Eletrônicos
+                                        </a>
+
+                                        <a class="flex-sm-fill text-center nav-link btn" id="profile-tab"
+                                            data-bs-toggle="tab" data-bs-target="#lab-tab-${regiao}" type="button" role="tab"
+                                            aria-controls="lab-tab-${regiao}" aria-selected="false">
+                                            Laboratoriais
+                                        </a>
+
+                                    </nav>
+                                </div>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="elet-tab-${regiao}" role="tabpanel"
+                                        aria-labelledby="home-tab" tabindex="0">
+                                        <div class="row row-data">
+                                        ${elts}
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row row-data">
-                                    ${cards}
+                                    <div class="tab-pane fade" id="lab-tab-${regiao}" role="tabpanel"
+                                        aria-labelledby="profile-tab" tabindex="0">
+                                        <div class="row row-data">
+                                        ${labs}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
