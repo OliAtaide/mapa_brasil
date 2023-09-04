@@ -61,28 +61,19 @@ let equipamentos = {
     "Sistema de Fotodocumenta\u00e7\u00e3o": 1
 }
 
-$.ajax({
-    url: 'scripts/data.json',
-    dataType: "json",
-    type: 'GET',
-    success: function (_data) {
+function printCard(filtered, regiao) {
+    var elts = '', labs = '';
 
-        regioes.forEach(regiao => {
+    var total = 0;
 
-            const filtered = _data.filter(item => item["Região"] === regiao)
+    for (var property in filtered[0]) {
+        var sum = filtered.reduce((accumulator, currentValue) => accumulator + currentValue[property], 0);
 
-            var elts = '', labs = '';
+        if (sum && Number.isInteger(sum)) {
 
-            var total = 0;
-
-            for (var property in filtered[0]) {
-                var sum = filtered.reduce((accumulator, currentValue) => accumulator + currentValue[property], 0);
-
-                if (sum && Number.isInteger(sum)) {
-
-                    total += sum;
-                    var card =
-                        `
+            total += sum;
+            var card =
+                `
                                     <div class="col my-2">
                                         <div class="card data-card">
                                             <div class="card-body py-1">
@@ -97,17 +88,17 @@ $.ajax({
                                     </div>
                         `;
 
-                    if (!equipamentos[property]) {
-                        elts += card
-                    }
-                    else {
-                        labs += card
-                    }
-                }
+            if (!equipamentos[property]) {
+                elts += card
             }
+            else {
+                labs += card
+            }
+        }
+    }
 
-            $('.map').prepend(
-                `
+    $('.map').prepend(
+        `
                         <div class="card map-card py-3" id="map${regiao}" style="display: none;">
                             <div class="card-title d-flex card-header">
                                     <h3>
@@ -167,21 +158,38 @@ $.ajax({
                             </div>
                         </div>
                 `
-            )
+    )
+}
+
+$.ajax({
+    url: 'scripts/data.json',
+    dataType: "json",
+    type: 'GET',
+    success: function (_data) {
+
+        printCard(_data, 'Brasil')
+
+        regioes.forEach(regiao => {
+
+            const filtered = _data.filter(item => item["Região"] === regiao)
+
+            printCard(filtered, regiao)
 
         });
 
-
-
-
+        $('#mapBrasil').show();
     }
 })
 
 function unselectByClick() {
+    console.log('ok')
     const points = this.getSelectedPoints();
+    console.log(points)
     if (points.length > 0) {
         points.forEach(point => point.select(false));
     }
+    $('.map-card').hide();
+    $('#mapBrasil').show();
 }
 
 var currentColor;
@@ -240,6 +248,11 @@ $.ajax({
                                 this.update({
                                     color: '#f9f9f9',
                                 });
+                                console.log(!this.series.chart.getSelectedPoints())
+                                if (this.series.chart.getSelectedPoints() == 0) {
+                                    $('.map-card').hide();
+                                    $('#mapBrasil').show();
+                                }
                             },
                             mouseOver: function () {
                                 if (!this.selected) {
