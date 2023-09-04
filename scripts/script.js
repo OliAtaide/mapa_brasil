@@ -78,8 +78,6 @@ $.ajax({
             for (var property in filtered[0]) {
                 var sum = filtered.reduce((accumulator, currentValue) => accumulator + currentValue[property], 0);
 
-
-
                 if (sum && Number.isInteger(sum)) {
 
                     total += sum;
@@ -112,14 +110,14 @@ $.ajax({
                 `
                         <div class="card map-card py-3" id="map${regiao}" style="display: none;">
                             <div class="card-title d-flex card-header">
-                                <h3>
+                                    <h3>
                                     ${regiao}
                                     </h3>
                                 <button onclick="location.href='regioes/${regiao}.html';" class="btn border ms-auto d-flex align-items-center gap-2">
                                     <i class="bi bi-eye"></i>Ver detalhes
                                 </button>
                             </div>
-                            <div class="card-subheader mx-3">
+                            <div class="card-subheader mx-3 mt-3">
                             
                                 <div class="d-flex align-items-center">
                                     <h5>
@@ -132,7 +130,7 @@ $.ajax({
                                 <div class="border botoes">
                                     <nav class="nav nav-tabs flex-row gap-3" id="myTab" role="tablist">
 
-                                        <a class="flex-sm-fill text-center nav-link active btn" id="home-tab"
+                                        <a class="flex-sm-fill text-center nav-link active btn justify-content-center" id="home-tab"
                                             data-bs-toggle="tab" data-bs-target="#elet-tab-${regiao}" type="button" role="tab"
                                             aria-controls="elet-tab-${regiao}" aria-selected="true">
                                             <span class="material-symbols-outlined">
@@ -141,7 +139,7 @@ $.ajax({
                                             Eletrônicos
                                         </a>
 
-                                        <a class="flex-sm-fill text-center nav-link btn" id="profile-tab"
+                                        <a class="flex-sm-fill text-center nav-link btn justify-content-center" id="profile-tab"
                                             data-bs-toggle="tab" data-bs-target="#lab-tab-${regiao}" type="button" role="tab"
                                             aria-controls="lab-tab-${regiao}" aria-selected="false">
                                             <span class="material-symbols-outlined">

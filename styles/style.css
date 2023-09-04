@@ -25,6 +25,15 @@ body {
   width: 50% !important;
   color: #0b486b;
 }
+.map-card .card-header .btn,
+.map-card .nav-link {
+  color: #0b486b;
+  border-color: #0b486b !important;
+}
+.map-card .card-header .btn:hover,
+.map-card .nav-link:hover {
+  background-color: rgba(11, 72, 107, 0.2509803922);
+}
 .map-card .row-data {
   overflow-y: auto;
   max-height: 400px;
@@ -33,12 +42,10 @@ body {
   gap: 0.5em;
   display: flex;
   align-items: center;
-  border-color: #0b486b !important;
-  color: #0b486b;
 }
 .map-card .nav-link.active {
   background-color: #0b486b;
-  color: white;
+  color: white !important;
 }
 .map-card .card-header::before {
   content: "";
@@ -89,6 +96,10 @@ path::after {
   display: flex;
 }
 
+.nav-tabs {
+  border: 0;
+}
+
 .card-header {
   background-color: white;
   border: none;
@@ -108,14 +119,19 @@ path::after {
   border-color: #c41c00 !important;
   color: #c41c00 !important;
 }
-#mapNordeste .card-body h3,
-#mapNordeste .card-body h5,
-#mapNordeste .card-body p {
-  color: #ff8a50 !important;
+#mapNordeste .card-header .btn:hover {
+  background-color: rgba(196, 28, 0, 0.2509803922);
+}
+#mapNordeste .data-card,
+#mapNordeste .nav-link {
+  color: #ff8a50;
 }
 #mapNordeste .nav-link {
   border-color: #ff8a50 !important;
   color: #ff8a50;
+}
+#mapNordeste .nav-link:hover {
+  background-color: rgba(255, 138, 80, 0.2509803922);
 }
 #mapNordeste .nav-link.active {
   background-color: #ff8a50;
@@ -125,18 +141,22 @@ path::after {
 #mapNorte {
   border-color: #178545;
 }
-#mapNorte .card-header .btn {
+#mapNorte .card-header .btn,
+#mapNorte .nav-link {
   border-color: #178545 !important;
+}
+#mapNorte .card-header .btn:hover,
+#mapNorte .nav-link:hover {
+  background-color: rgba(23, 133, 69, 0.2509803922);
 }
 #mapNorte .card-header::before {
   background-color: #178545 !important;
 }
-#mapNorte .card-header, #mapNorte .card-header .btn,
-#mapNorte .card-subheader, #mapNorte .data-card {
-  color: #178545 !important;
-}
+#mapNorte .card-header,
+#mapNorte .card-header .btn,
+#mapNorte .card-subheader,
+#mapNorte .data-card,
 #mapNorte .nav-link {
-  border-color: #178545 !important;
   color: #178545;
 }
 #mapNorte .nav-link.active {
@@ -147,45 +167,55 @@ path::after {
 #mapCentro-Oeste {
   border-color: #ffc107;
 }
-#mapCentro-Oeste .card-header .btn {
+#mapCentro-Oeste .card-header .btn,
+#mapCentro-Oeste .nav-link {
   border-color: #946900 !important;
+}
+#mapCentro-Oeste .card-header .btn:hover,
+#mapCentro-Oeste .nav-link:hover {
+  background-color: rgba(255, 193, 7, 0.2509803922);
 }
 #mapCentro-Oeste .card-header::before {
   background-color: #ffc107 !important;
 }
-#mapCentro-Oeste .card-header, #mapCentro-Oeste .card-header .btn,
-#mapCentro-Oeste .card-subheader, #mapCentro-Oeste .data-card {
-  color: #946900 !important;
-}
+#mapCentro-Oeste .card-header,
+#mapCentro-Oeste .card-header .btn,
+#mapCentro-Oeste .card-subheader,
+#mapCentro-Oeste .data-card,
 #mapCentro-Oeste .nav-link {
-  border-color: #946900 !important;
-  color: #946900;
+  color: #946900 !important;
 }
 #mapCentro-Oeste .nav-link.active {
   background-color: #946900;
-  color: white;
+  color: white !important;
 }
 
 #mapSudeste {
   border-color: #446ab8;
 }
-#mapSudeste .card-header .btn, #mapSudeste .btn-elet {
+#mapSudeste .card-header .btn {
   border-color: #446ab8 !important;
+}
+#mapSudeste .card-header .btn:hover,
+#mapSudeste .nav-link:hover {
+  background-color: rgba(68, 106, 184, 0.2509803922);
 }
 #mapSudeste .card-header::before {
   background-color: #446ab8 !important;
 }
-#mapSudeste .card-header, #mapSudeste .card-header .btn,
-#mapSudeste .card-subheader, #mapSudeste .data-card {
+#mapSudeste .card-header,
+#mapSudeste .card-header .btn,
+#mapSudeste .card-subheader,
+#mapSudeste .data-card,
+#mapSudeste .nav-link {
   color: #446ab8 !important;
 }
 #mapSudeste .nav-link {
   border-color: #446ab8 !important;
-  color: #446ab8;
 }
 #mapSudeste .nav-link.active {
   background-color: #446ab8;
-  color: white;
+  color: white !important;
 }
 
 .accordion-button {
