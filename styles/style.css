@@ -17,10 +17,17 @@ body {
   font-weight: 500;
 }
 
-.btn-filtro {
+.btn-filtro,
+.btn-export {
   background-color: #0b486b;
   color: white;
   font-weight: 600;
+}
+.btn-filtro:hover,
+.btn-export:hover {
+  background-color: white;
+  border: 1px solid #0b486b;
+  color: #0b486b;
 }
 
 .map-card .card-header {
@@ -271,6 +278,27 @@ table .btn-download {
 }
 .btn_totalbrasil:hover {
   background-color: rgba(11, 72, 107, 0.2509803922);
+}
+
+.popover {
+  min-width: 368px;
+  margin: 1em !important;
+}
+.popover .tip {
+  background-color: #dae1f1;
+  color: #0b486b;
+}
+.popover[data-popper-placement=left] {
+  margin-top: 5em !important;
+}
+.popover[data-popper-placement=left] .popover-arrow {
+  transform: translate3d(0px, 3em, 0px) !important;
+}
+.popover[data-popper-placement=right] {
+  margin-top: 5em !important;
+}
+.popover[data-popper-placement=right] .popover-arrow {
+  transform: translate3d(0px, 3em, 0px) !important;
 }
 
 /*# sourceMappingURL=style.css.map */

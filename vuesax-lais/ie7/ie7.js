@@ -13,6 +13,10 @@
 		el.innerHTML = '<span style="font-family: \'vuesax-lais\'">' + entity + '</span>' + html;
 	}
 	var icons = {
+		'vl-marker': '&#xe91b;',
+		'vl-marker-2': '&#xe91c;',
+		'vl-marker-3': '&#xe91d;',
+		'vl-marker-4': '&#xe91e;',
 		'vl-dose-check': '&#xe900;',
 		'vl-dose-syringe': '&#xe901;',
 		'vl-dose': '&#xe902;',

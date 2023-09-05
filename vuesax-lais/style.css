@@ -1,108 +1,147 @@
 @font-face {
-  font-family: 'vuesax-lais';
-  src:  url('fonts/vuesax-lais.eot?q78xvf');
-  src:  url('fonts/vuesax-lais.eot?q78xvf#iefix') format('embedded-opentype'),
-    url('fonts/vuesax-lais.ttf?q78xvf') format('truetype'),
-    url('fonts/vuesax-lais.woff?q78xvf') format('woff'),
-    url('fonts/vuesax-lais.svg?q78xvf#vuesax-lais') format('svg');
+  font-family: "vuesax-lais";
+  src: url("fonts/vuesax-lais.eot?hmgeko");
+  src: url("fonts/vuesax-lais.eot?hmgeko#iefix") format("embedded-opentype"), url("fonts/vuesax-lais.ttf?hmgeko") format("truetype"), url("fonts/vuesax-lais.woff?hmgeko") format("woff"), url("fonts/vuesax-lais.svg?hmgeko#vuesax-lais") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-
-[class^="vl-"], [class*=" vl-"] {
+[class^=vl-], [class*=" vl-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'vuesax-lais' !important;
+  font-family: "vuesax-lais" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.vl-marker:before {
+  content: "\e91b";
+}
+
+.vl-marker-2:before {
+  content: "\e91c";
+}
+
+.vl-marker-3:before {
+  content: "\e91d";
+}
+
+.vl-marker-4:before {
+  content: "\e91e";
+}
+
 .vl-dose-check:before {
   content: "\e900";
 }
+
 .vl-dose-syringe:before {
   content: "\e901";
 }
+
 .vl-dose:before {
   content: "\e902";
 }
+
 .vl-flu:before {
   content: "\e903";
 }
+
 .vl-lung:before {
   content: "\e904";
 }
+
 .vl-polio:before {
   content: "\e905";
 }
+
 .vl-quick-access:before {
   content: "\e906";
 }
+
 .vl-situation-room:before {
   content: "\e907";
 }
+
 .vl-syringe-02-check:before {
   content: "\e908";
 }
+
 .vl-syringe-02:before {
   content: "\e909";
 }
+
 .vl-syringe-03-check:before {
   content: "\e90a";
 }
+
 .vl-syringe-03:before {
   content: "\e90b";
 }
+
 .vl-syringe-04-check:before {
   content: "\e90c";
 }
+
 .vl-syringe-04:before {
   content: "\e90d";
 }
+
 .vl-syringe-add:before {
   content: "\e90e";
 }
+
 .vl-syringe-broken:before {
   content: "\e90f";
 }
+
 .vl-syringe-check:before {
   content: "\e910";
 }
+
 .vl-syringe-close:before {
   content: "\e911";
 }
+
 .vl-syringe-edit:before {
   content: "\e912";
 }
+
 .vl-syringe-time:before {
   content: "\e913";
 }
+
 .vl-syringe:before {
   content: "\e914";
 }
+
 .vl-test-tube-virus:before {
   content: "\e915";
 }
+
 .vl-test-tube:before {
   content: "\e916";
 }
+
 .vl-vaccination-date:before {
   content: "\e917";
 }
+
 .vl-vaccination-monitoring:before {
   content: "\e918";
 }
+
 .vl-vaccine-card:before {
   content: "\e919";
 }
+
 .vl-virus:before {
   content: "\e91a";
 }
+
+/*# sourceMappingURL=style.css.map */

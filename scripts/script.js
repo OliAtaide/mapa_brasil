@@ -61,6 +61,19 @@ let equipamentos = {
     "Sistema de Fotodocumenta\u00e7\u00e3o": 1
 }
 
+$(document).ready(function () {
+    const list = [].slice.call($('[data-bs-toggle="popover"]'))
+    list.map((el) => {
+        let opts = {
+            animation: false,
+            sanitize: false,
+            content: () => $(el.getAttribute('data-bs-content-id')).html(),
+            html: true,
+        }
+        new bootstrap.Popover(el, opts);
+    })
+});
+
 function printCard(filtered, regiao) {
     var elts = '', labs = '';
 
@@ -184,9 +197,7 @@ $.ajax({
 })
 
 function unselectByClick() {
-    console.log('ok')
     const points = this.getSelectedPoints();
-    console.log(points)
     if (points.length > 0) {
         points.forEach(point => point.select(false));
     }
@@ -250,7 +261,6 @@ $.ajax({
                                 this.update({
                                     color: '#f9f9f9',
                                 });
-                                console.log(!this.series.chart.getSelectedPoints())
                                 if (this.series.chart.getSelectedPoints() == 0) {
                                     $('.map-card').hide();
                                     $('#mapBrasil').show();
@@ -283,7 +293,6 @@ $.ajax({
             series: _data,
         };
         map = Highcharts.mapChart('mapField', options);
-        console.log(map)
     },
     error: function (request, error) {
         alert(" Can't do because: " + error);
