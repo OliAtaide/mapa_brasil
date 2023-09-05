@@ -105,7 +105,7 @@ function printCard(filtered, regiao) {
                                     ${regiao}
                                     </h3>
                                 <button onclick="location.href='regioes/${regiao}.html';" class="btn border ms-auto d-flex align-items-center gap-2">
-                                    <i class="bi bi-eye"></i>Ver detalhes
+                                    <i class="isax isax-eye"></i>Ver detalhes
                                 </button>
                             </div>
                             <div class="card-subheader mx-3 mt-3">
@@ -124,18 +124,18 @@ function printCard(filtered, regiao) {
                                         <a class="flex-sm-fill text-center nav-link active btn justify-content-center" id="home-tab"
                                             data-bs-toggle="tab" data-bs-target="#elet-tab-${regiao}" type="button" role="tab"
                                             aria-controls="elet-tab-${regiao}" aria-selected="true">
-                                            <span class="material-symbols-outlined">
-                                                bolt
-                                            </span>
+                                            <i class="isax isax-flash-1">
+                                                
+                                            </i>
                                             Eletrônicos
                                         </a>
 
                                         <a class="flex-sm-fill text-center nav-link btn justify-content-center" id="profile-tab"
                                             data-bs-toggle="tab" data-bs-target="#lab-tab-${regiao}" type="button" role="tab"
                                             aria-controls="lab-tab-${regiao}" aria-selected="false">
-                                            <span class="material-symbols-outlined">
-                                                vaccines
-                                            </span>
+                                            <i class="vl-test-tube-virus">
+                                                
+                                            </i>
                                             Laboratoriais
                                         </a>
 
@@ -160,6 +160,8 @@ function printCard(filtered, regiao) {
                 `
     )
 }
+
+var map = undefined;
 
 $.ajax({
     url: 'scripts/data.json',
@@ -280,10 +282,14 @@ $.ajax({
             },
             series: _data,
         };
-        Highcharts.mapChart('mapField', options);
-
+        map = Highcharts.mapChart('mapField', options);
+        console.log(map)
     },
     error: function (request, error) {
         alert(" Can't do because: " + error);
     },
+})
+
+$('.btn_totalbrasil').click(function () {
+    Highcharts.fireEvent(map, 'click');
 })

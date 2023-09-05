@@ -17,6 +17,12 @@ body {
   font-weight: 500;
 }
 
+.btn-filtro {
+  background-color: #0b486b;
+  color: white;
+  font-weight: 600;
+}
+
 .map-card .card-header {
   position: relative;
 }
@@ -255,6 +261,16 @@ table .btn-download {
 }
 .highcharts-label:last-child rect {
   fill: #0b486b !important;
+}
+
+.btn_totalbrasil {
+  position: absolute;
+  right: 1em;
+  border-color: #0b486b !important;
+  color: #0b486b !important;
+}
+.btn_totalbrasil:hover {
+  background-color: rgba(11, 72, 107, 0.2509803922);
 }
 
 /*# sourceMappingURL=style.css.map */

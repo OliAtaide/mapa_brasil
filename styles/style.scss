@@ -18,6 +18,12 @@ body {
     font-weight: 500;
 }
 
+.btn-filtro{
+    background-color: #0b486b;
+    color: white;
+    font-weight: 600;
+}
+
 .map-card .card-header {
     position: relative;
 }
@@ -296,5 +302,16 @@ table {
 
     &:last-child rect {
         fill: #0b486b !important;
+    }
+}
+
+.btn_totalbrasil{
+    position: absolute;
+    right: 1em;
+    border-color: #0b486b !important;
+    color: #0b486b !important;
+
+    &:hover{
+        background-color: #0b486b40;    
     }
 }

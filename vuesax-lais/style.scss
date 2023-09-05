@@ -1,0 +1,165 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q78xvf');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q78xvf#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?q78xvf') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?q78xvf') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?q78xvf##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="vl-"], [class*=" vl-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vl-dose-check {
+  &:before {
+    content: $vl-dose-check; 
+  }
+}
+.vl-dose-syringe {
+  &:before {
+    content: $vl-dose-syringe; 
+  }
+}
+.vl-dose {
+  &:before {
+    content: $vl-dose; 
+  }
+}
+.vl-flu {
+  &:before {
+    content: $vl-flu; 
+  }
+}
+.vl-lung {
+  &:before {
+    content: $vl-lung; 
+  }
+}
+.vl-polio {
+  &:before {
+    content: $vl-polio; 
+  }
+}
+.vl-quick-access {
+  &:before {
+    content: $vl-quick-access; 
+  }
+}
+.vl-situation-room {
+  &:before {
+    content: $vl-situation-room; 
+  }
+}
+.vl-syringe-02-check {
+  &:before {
+    content: $vl-syringe-02-check; 
+  }
+}
+.vl-syringe-02 {
+  &:before {
+    content: $vl-syringe-02; 
+  }
+}
+.vl-syringe-03-check {
+  &:before {
+    content: $vl-syringe-03-check; 
+  }
+}
+.vl-syringe-03 {
+  &:before {
+    content: $vl-syringe-03; 
+  }
+}
+.vl-syringe-04-check {
+  &:before {
+    content: $vl-syringe-04-check; 
+  }
+}
+.vl-syringe-04 {
+  &:before {
+    content: $vl-syringe-04; 
+  }
+}
+.vl-syringe-add {
+  &:before {
+    content: $vl-syringe-add; 
+  }
+}
+.vl-syringe-broken {
+  &:before {
+    content: $vl-syringe-broken; 
+  }
+}
+.vl-syringe-check {
+  &:before {
+    content: $vl-syringe-check; 
+  }
+}
+.vl-syringe-close {
+  &:before {
+    content: $vl-syringe-close; 
+  }
+}
+.vl-syringe-edit {
+  &:before {
+    content: $vl-syringe-edit; 
+  }
+}
+.vl-syringe-time {
+  &:before {
+    content: $vl-syringe-time; 
+  }
+}
+.vl-syringe {
+  &:before {
+    content: $vl-syringe; 
+  }
+}
+.vl-test-tube-virus {
+  &:before {
+    content: $vl-test-tube-virus; 
+  }
+}
+.vl-test-tube {
+  &:before {
+    content: $vl-test-tube; 
+  }
+}
+.vl-vaccination-date {
+  &:before {
+    content: $vl-vaccination-date; 
+  }
+}
+.vl-vaccination-monitoring {
+  &:before {
+    content: $vl-vaccination-monitoring; 
+  }
+}
+.vl-vaccine-card {
+  &:before {
+    content: $vl-vaccine-card; 
+  }
+}
+.vl-virus {
+  &:before {
+    content: $vl-virus; 
+  }
+}
+
